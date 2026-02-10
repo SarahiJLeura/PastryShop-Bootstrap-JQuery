@@ -1,0 +1,52 @@
+.body{
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon-bakery{
+    border-radius: 30%;
+    background-color: #ee2b5b;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 20px;
+}
+
+.search-input {
+    padding-left: 40px;
+    width: 260px;
+    background-color: #f1f5f9;
+    border: none;
+    font-size: 0.875rem;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e2e8f0;
+    border: 2px solid #fff;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a.active{
+    text-decoration: underline;
+    color: #ee2b5b !important;
+    text-decoration-color: #ee2b5b;
+    text-underline-offset: 6px;
+}
