@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>SweetBakery Admin</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -27,16 +27,16 @@
         <link rel="stylesheet" href="assets/styles/AdminStyles.css">
     </head>
 
-    <body>
-        <header>
+    <body style="background-color: #f8f6f6;">
+        <header class="bg-white">
             <!-- place navbar here -->
-             <nav class="navbar navbar-expand-lg bg-body-tertiary">
+             <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);">
                 <div class="container-fluid px-5">
                     <div class="logo d-flex align-items-center gap-2">
                         <div class="icon-bakery p-2 rounded-lg text-white">
                             <span class="material-symbols-outlined text-2xl">bakery_dining</span>
                         </div>
-                        <a class="navbar-brand mb-0 h1" href="#">SweetBakey Admin</a>
+                        <a class="navbar-brand mb-0 h1" href="#">SweetBakery Admin</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -84,7 +84,162 @@
                 </div>
             </nav>
         </header>
-        <main></main>
+        
+        <main>
+            <div class="container my-4">
+                <!-- Breadcrumb -->
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Inventory Management</li>
+                    </ol>
+                </nav>
+
+                <!-- Header Section -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+                    <div>
+                        <h2 class="fw-bold mb-1">Inventory Management</h2>
+                        <p class="text-secondary mb-0">Manage your pastry catalog and expand your menu.</p>
+                    </div>
+                    <button class="btn btn-outline-secondary d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined">file_download</span>
+                        Export
+                    </button>
+                </div>
+
+                <!-- Add Product Card -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white fw-semibold d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined text-danger">add_circle</span>
+                        Add New Product
+                    </div>
+                    <div class="card-body">
+                        <form class="row g-3 align-items-end">
+                            <div class="col-md-6 col-lg-3">
+                                <label class="form-label fw-semibold">Product Name</label>
+                                <input type="text" class="form-control custom-input" placeholder="Chocolate Croissant">
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <label class="form-label fw-semibold">Category</label>
+                                <select class="form-select custom-input">
+                                    <option>Pastries</option>
+                                    <option>Cakes</option>
+                                    <option>Breads</option>
+                                    <option>Cookies</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <label class="form-label fw-semibold">Price ($)</label>
+                                <input type="text" class="form-control custom-input" placeholder="0.00">
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <label class="form-label fw-semibold">Image URL</label>
+                                <input type="text" class="form-control custom-input" placeholder="https://image-url.com">
+                            </div>
+
+                            <div class="col-12 text-end">
+                                <button type="submit" class="btn btn-primary px-4 d-inline-flex align-items-center gap-2">
+                                    <span class="material-symbols-outlined">save</span>
+                                    Save Product
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Inventory Table -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">Current Inventory</span>
+                        <input type="text" class="form-control form-control-sm table-filter" placeholder="Filter table...">
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0">
+                            <thead class="table-light text-uppercase small">
+                                <tr>
+                                    <th>Thumbnail</th>
+                                    <th>Product</th>
+                                    <th>Category</th>
+                                    <th class="text-end">Price</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec"
+                                            class="product-img">
+                                    </td>
+                                    <td class="fw-semibold">Classic Butter Croissant</td>
+                                    <td><span class="badge bg-danger-subtle text-danger">Pastries</span></td>
+                                    <td class="text-end">$4.50</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-light action-btn">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="btn btn-sm btn-light action-btn text-danger">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+                                            class="product-img">
+                                    </td>
+                                    <td class="fw-semibold">Chocolate Truffle Cake</td>
+                                    <td><span class="badge bg-warning-subtle text-warning">Cakes</span></td>
+                                    <td class="text-end">$32.00</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-light action-btn">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="btn btn-sm btn-light action-btn text-danger">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b"
+                                            class="product-img">
+                                    </td>
+                                    <td class="fw-semibold">Artisan Sourdough Loaf</td>
+                                    <td><span class="badge bg-success-subtle text-success">Breads</span></td>
+                                    <td class="text-end">$7.00</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-light action-btn">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="btn btn-sm btn-light action-btn text-danger">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                        <small class="text-secondary">Showing 3 of 24 products</small>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary me-2" disabled>Previous</button>
+                            <button class="btn btn-sm btn-outline-secondary">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
