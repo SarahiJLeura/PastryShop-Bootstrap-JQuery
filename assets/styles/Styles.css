@@ -1,0 +1,60 @@
+/*Colores*/
+:root{--primary:#ee2b5b;--background-light:#f8f6f6;--background-dark:#221015}
+body.dark{background-color:var(--background-dark);color:#fff}
+.material-symbols-outlined{font-variation-settings: 'FILL' 0,'wght' 400}
+
+/*Header transparency */
+.sticky-bg{background-color:rgba(248,246,246,.85);backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,0,0,.05)}
+body.dark .sticky-bg{background-color:rgba(34,16,21,.85);border-bottom:1px solid rgba(255,255,255,.08)}
+
+/*Tamanos */
+.size-8{width:48px;height:48px}
+.size-6{width:40px;height:40px}
+.hide-scrollbar::-webkit-scrollbar{display:none}
+.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+
+/*Productos*/
+.product-img{height:0;padding-bottom:100%;background-position:center;background-size:cover;border-radius:.75rem;overflow:hidden;position:relative}
+.product-card .badge-bestseller{position:absolute;top:.75rem;right:.75rem}
+.product-card .fav-btn{position:absolute;top:.5rem;right:.5rem}
+.product-img > .overlay{position:absolute;inset:0;transition:transform .45s ease}
+.product-card:hover .overlay{transform:scale(1.06)}
+
+/*Botones*/
+.btn-primary{background-color:var(--primary);border-color:var(--primary)}
+.btn-primary:focus,
+.btn-primary:focus-visible,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:focus:active {
+    background-color: #ae1239; 
+    border-color: #ae1239;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.text-primary{color:var(--primary) !important}
+
+/*imagen de la tarjeta*/
+.main-image {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: .75rem;
+  display: block;
+}
+
+.thumbs-row { display:flex; gap:.5rem; margin-top:.75rem; flex-wrap:wrap; }
+.thumb { width:80px; height:80px; overflow:hidden; border-radius:.6rem; cursor:pointer; border:2px solid transparent; }
+.thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+.thumb.active { border-color: var(--primary, #ee2b5b); }
+.card { border-radius:.75rem; box-shadow: 0 8px 20px rgba(11,17,22,0.06); border:0; }
+.card-body { padding:.75rem; }
+.product-name { font-weight:700; font-size:.95rem; }
+
+/*Responsivo*/
+.hero-title{font-size:2.25rem;font-weight:700}
+@media(min-width:768px){.hero-title{font-size:3rem}}
+
+.rounded-xl{border-radius:1rem}
+.card-hover img{transition:transform .45s ease}
+.card-hover:hover img{transform:scale(1.06)}
